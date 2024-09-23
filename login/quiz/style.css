@@ -1,7 +1,8 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f9f9f9;
-    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(../../assets/logo.png);
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(../../assets/logo2.jpg);
+    object-fit:cover;
     margin: 0;
     padding: 0;
 }
@@ -10,27 +11,32 @@ body {
     max-width: 600px;
     margin: 50px auto;
     padding: 20px;
-    background-color: #dbd0d0;
+    background-color: #dbd0d046;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    text-align: center;
+    text-align: center;    
+    box-shadow: 
+    2px 2px 20px rgba(99, 64, 64, 0.644),      /* Bottom right shadow */
+    -2px -2px 20px rgba(99, 64, 64, 0.644),         /* Top left shadow */
+    2px -2px 20px rgba(99, 64, 64, 0.644),        /* Top right shadow */
+    -2px 2px 20px rgba(99, 64, 64, 0.644);           
 }
 
 h1 {
     margin-bottom: 20px;
-    color: #1d1212;
+    color: #ffffffe8;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
 
 h2 {
     margin-bottom: 15px;
-    color: #460000;
+    color: #fffcfcc7;
     font-family: 'Times New Roman', Times, serif;
 }
 
 .progress-container {
     width: 100%;
-    background-color: #331616;
+    background-color: #6b2323d3;
     border-radius: 20px;
     margin-bottom: 20px;
     height: 15px;
@@ -39,7 +45,7 @@ h2 {
 .progress-bar {
     width: 0;
     height: 100%;
-    background-color: #a11111;
+    background-color: #ddd7d7;
     border-radius: 20px;
     transition: width 0.4s ease;
 }
@@ -64,8 +70,7 @@ h2 {
     flex-direction: column;
     align-items: center;
     padding: 10px;
-    background-color: #ffffff;
-    border: 2px solid #ff0000;
+    background-color: #ffffff50;
     border-radius: 8px;
     transition: background-color 0.3s ease;
 }
@@ -180,6 +185,67 @@ input{
     }
 }
 
+/* Media Queries */
+
+/* Mobile */
+@media (max-width: 767px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    .content {
+        margin-left: 0;
+        flex-direction: row;
+        height: auto;
+        padding: 15px;
+    }
+
+    .sign {
+        font-size: 14px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    nav {
+        flex-direction: row;
+        border: #000000;
+        border-radius: 10px;
+        border-style: double;
+        padding: 15px;
+    }
+
+    .icons {
+        margin: 10px;
+        margin-left: 20px;
+    }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+    main {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .content {
+        margin-left: 15px;
+        padding: 20px;
+    }
+
+    .sign {
+        font-size: 15px;
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    nav {
+        padding: 20px;
+    }
+
+    .icons {
+        margin: 15px;
+        margin-left: 30px;
+    }
+}
 /* Desktop */
-@media (min-width: 1025px) {
+@media (min-width: 1025px) {
 }
